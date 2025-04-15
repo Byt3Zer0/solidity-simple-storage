@@ -15,26 +15,28 @@ Follow these steps to run the project locally:
 
 ### 1. Install Dependencies
 
-```bash
+```
 npm install
-2. Compile the Smart Contract
-bash
-Copiar
-Editar
+```
+### 2. Compile the Smart Contract
+
+```
 npx hardhat compile
-3. Run Tests (coming soon)
-bash
-Copiar
-Editar
+```
+
+### 3. Run Tests (coming soon)
+
+```
 npx hardhat test
-🧠 What This Project Demonstrates
+```
+### 🧠 What This Project Demonstrates
 Writing a basic Solidity smart contract
 
 Compiling with Hardhat
 
 Setting up a development environment for Ethereum-based dApps
 
-🛠️ Technologies Used
+### 🛠️ Technologies Used
 Solidity
 
 Hardhat
@@ -43,10 +45,10 @@ JavaScript
 
 Node.js
 
-📚 Learning Journey
+### 📚 Learning Journey
 This repository is part of my journey to become a Smart Contract Developer, following the Solidity Course by Patrick Collins and the Cyfrin Updraft developer platform.
 
-🧑‍💻 Author
+### 🧑‍💻 Author
 Zaskki – aspiring blockchain developer
 
 This is just the beginning. Stay tuned for more smart contracts and deeper learning as I progress through the course!
