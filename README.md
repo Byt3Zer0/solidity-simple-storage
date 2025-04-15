@@ -1,54 +1,88 @@
-# 📦 SimpleStorage Smart Contract
 
-This project implements a basic smart contract written in Solidity for storing and retrieving a single integer value. It's built using the Hardhat development environment.
+# 📦 Solidity Simple Storage
+
+This is a simple Solidity project that demonstrates how to create and test a basic smart contract using Hardhat. The contract is designed to store and update a number. The main goal of this repository is to help beginners get familiar with Solidity, smart contract development, and Hardhat testing.
 
 ## 📁 Project Structure
 
-- `contracts/SimpleStorage.sol`: Contains the smart contract logic.
-- `test/`: Directory for unit tests (to be implemented).
-- `hardhat.config.js`: Configuration file for Hardhat.
-- `package.json`: Project dependencies and scripts.
+```
+.
+├── contracts/                 # Solidity smart contracts
+│   └── SimpleStorage.sol      # The simple storage smart contract
+├── test/                      # Test scripts
+│   └── simpleStorage-test.js  # Tests for the SimpleStorage contract
+├── hardhat.config.js          # Hardhat configuration file
+├── package.json               # Project dependencies and scripts
+├── package-lock.json          # Dependency lock file
+└── README.md                  # This file
+```
 
-## 🚀 Getting Started
+## ⚙️ Features
 
-Follow these steps to run the project locally:
+- **SimpleStorage Contract**: A smart contract that stores a number and allows for updating the stored value.
+- **Tests**: Test cases to ensure the contract works correctly using Hardhat.
 
-### 1. Install Dependencies
+## 📜 Prerequisites
+
+To run this project, you need to have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (v16.0.0 or higher)
+- [npm](https://www.npmjs.com/)
+- [Hardhat](https://hardhat.org/)
+
+## ⚡ Setup
+
+1. Clone the repository:
+
+```
+git clone https://github.com/Zaskki/solidity-simple-storage.git
+```
+
+2. Install dependencies:
 
 ```
 npm install
 ```
-### 2. Compile the Smart Contract
+
+3. Compile the smart contract:
 
 ```
 npx hardhat compile
 ```
 
-### 3. Run Tests (coming soon)
+4. Run the tests:
 
 ```
 npx hardhat test
 ```
-### 🧠 What This Project Demonstrates
-Writing a basic Solidity smart contract
 
-Compiling with Hardhat
+### Test Results
 
-Setting up a development environment for Ethereum-based dApps
+When you run the tests, you should see the following output:
 
-### 🛠️ Technologies Used
-Solidity
+```
+  SimpleStorage Contract
+    √ should deploy the contract
+    √ should store a number
+    √ should update the stored number
 
-Hardhat
+  3 passing (400ms)
+```
 
-JavaScript
+## 📚 Contract Details
 
-Node.js
+- **SimpleStorage.sol**: A basic Solidity smart contract with a `store()` function to store a number and a `retrieve()` function to get the stored number.
+- The contract is deployed and tested using Hardhat.
 
-### 📚 Learning Journey
-This repository is part of my journey to become a Smart Contract Developer, following the Solidity Course by Patrick Collins and the Cyfrin Updraft developer platform.
+## 🎓 What I Learned
 
-### 🧑‍💻 Author
-Zaskki – aspiring blockchain developer
+- How to write and deploy a basic Solidity contract.
+- How to test a Solidity contract using Hardhat.
+- How to interact with the Ethereum blockchain using JavaScript.
 
+## 🚀 Next Steps
+
+- Continue to build more complex smart contracts.
+- Explore deploying contracts to a test network (like Rinkeby or Sepolia).
+- Learn how to interact with smart contracts from a frontend application.
 This is just the beginning. Stay tuned for more smart contracts and deeper learning as I progress through the course!
