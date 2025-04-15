@@ -1,0 +1,25 @@
+{
+  "name": "solidity-simple-storage",
+  "version": "1.0.0",
+  "description": "Solidity's first project following Patrick Collins' course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zaskki/solidity-simple-storage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Zaskki/solidity-simple-storage/issues"
+  },
+  "homepage": "https://github.com/Zaskki/solidity-simple-storage#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.23.0"
+  }
+}
