@@ -98,7 +98,7 @@ This smart contract allows a user to store a number on the blockchain and update
 
 This project was created as part of my learning journey in the **Solidity** course by **Patrick Collins**. The resources from the course have been invaluable for understanding the core concepts of smart contract development.
 
-- **Patrick Collins' Solidity Course**: [Link to course](https://www.youtube.com/playlist?list=PLSpbQDCmEKjpXddTRw7l3R0e43_Jr9_VX)
+- **Patrick Collins' Solidity Course**: [Link to course](https://updraft.cyfrin.io/courses/solidity)
 - **Hardhat Documentation**: [Link to Hardhat](https://hardhat.org/)
 - **Solidity Documentation**: [Link to Solidity](https://soliditylang.org/docs/)
 
