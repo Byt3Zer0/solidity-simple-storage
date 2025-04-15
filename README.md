@@ -1,93 +1,117 @@
+# Solidity Simple Storage 🛠️
 
-# 📦 Solidity Simple Storage
+This is a simple Solidity project for learning how to create and interact with a basic smart contract. It is a basic contract that allows users to store and update a number on the Ethereum blockchain.
 
-This is a simple Solidity project that demonstrates how to create and test a basic smart contract using Hardhat. The contract is designed to store and update a number. The main goal of this repository is to help beginners get familiar with Solidity, smart contract development, and Hardhat testing.
+---
 
-## 📁 Project Structure
+## 🚀 Project Structure
+
+The project has the following structure:
 
 ```
-.
-├── contracts/                 # Solidity smart contracts
-│   └── SimpleStorage.sol      # The simple storage smart contract
-├── test/                      # Test scripts
-│   └── simpleStorage-test.js  # Tests for the SimpleStorage contract
-├── hardhat.config.js          # Hardhat configuration file
-├── package.json               # Project dependencies and scripts
-├── package-lock.json          # Dependency lock file
-└── README.md                  # This file
+solidity-simple-storage/
+├── contracts/
+│   └── SimpleStorage.sol         # Solidity contract code
+├── scripts/
+│   └── deploy.js                 # Script to deploy the contract
+├── test/
+│   └── simpleStorage-test.js     # Unit tests for the contract
+├── .gitignore                    # Git ignore file
+├── README.md                     # Project documentation
+├── hardhat.config.js             # Hardhat configuration file
+├── package.json                  # Node.js package file
+└── LICENSE                       # MIT License
 ```
 
-## ⚙️ Features
+---
 
-- **SimpleStorage Contract**: A smart contract that stores a number and allows for updating the stored value.
-- **Tests**: Test cases to ensure the contract works correctly using Hardhat.
+## 💡 Features
 
-## 📜 Prerequisites
+- **Store a number**: Users can store a number on the blockchain.
+- **Update a number**: The stored number can be updated.
+- **Testable**: Automated tests to ensure the contract behaves as expected.
 
-To run this project, you need to have the following installed on your machine:
+---
 
-- [Node.js](https://nodejs.org/) (v16.0.0 or higher)
-- [npm](https://www.npmjs.com/)
-- [Hardhat](https://hardhat.org/)
+## 📋 Prerequisites
+
+To get started with this project, ensure you have the following tools installed:
+
+- **Node.js**: The runtime environment for running JavaScript code.
+- **Hardhat**: Ethereum development environment to compile, test, and deploy Solidity contracts.
+- **npm**: Package manager for managing dependencies.
+
+---
 
 ## ⚡ Setup
 
 1. Clone the repository:
+    ```bash
+    git clone https://github.com/Zaskki/solidity-simple-storage.git
+    cd solidity-simple-storage
+    ```
 
-```
-git clone https://github.com/Zaskki/solidity-simple-storage.git
-```
+2. Install the dependencies:
+    ```bash
+    npm install
+    ```
 
-2. Install dependencies:
-
-```
-npm install
-```
-
-3. Compile the smart contract:
-
-```
-npx hardhat compile
-```
+3. Compile the contract:
+    ```bash
+    npx hardhat compile
+    ```
 
 4. Run the tests:
+    ```bash
+    npx hardhat test
+    ```
 
-```
-npx hardhat test
-```
+5. Deploy the contract (optional):
+    ```bash
+    npx hardhat run scripts/deploy.js --network <network-name>
+    ```
 
-### Test Results
+---
 
-When you run the tests, you should see the following output:
+## 📝 Contract Details
 
-```
-  SimpleStorage Contract
-    √ should deploy the contract
-    √ should store a number
-    √ should update the stored number
+### `SimpleStorage.sol`
 
-  3 passing (400ms)
-```
+This smart contract allows a user to store a number on the blockchain and update it later. The contract has the following functions:
 
-## 📚 Contract Details
+- **store(uint256 _number)**: Stores a number on the blockchain.
+- **retrieve()**: Retrieves the stored number.
 
-- **SimpleStorage.sol**: A basic Solidity smart contract with a `store()` function to store a number and a `retrieve()` function to get the stored number.
-- The contract is deployed and tested using Hardhat.
+---
 
-## 🎓 What I Learned
+## 🧑‍🏫 What I Learned
 
-- How to write and deploy a basic Solidity contract.
-- How to test a Solidity contract using Hardhat.
-- How to interact with the Ethereum blockchain using JavaScript.
+- How to set up a Solidity project using Hardhat.
+- How to write and deploy a simple Solidity contract.
+- How to interact with the blockchain by storing and retrieving data.
+- How to write automated tests for smart contracts.
+- How to manage dependencies and use npm in a blockchain project.
 
-## 🚀 Next Steps
+---
 
-- Continue to build more complex smart contracts.
-- Explore deploying contracts to a test network (like Rinkeby or Sepolia).
-- Learn how to interact with smart contracts from a frontend application.
-This is just the beginning. Stay tuned for more smart contracts and deeper learning as I progress through the course!
+## 📚 Acknowledgements
 
-## License
+This project was created as part of my learning journey in the **Solidity** course by **Patrick Collins**. The resources from the course have been invaluable for understanding the core concepts of smart contract development.
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+- **Patrick Collins' Solidity Course**: [Link to course](https://www.youtube.com/playlist?list=PLSpbQDCmEKjpXddTRw7l3R0e43_Jr9_VX)
+- **Hardhat Documentation**: [Link to Hardhat](https://hardhat.org/)
+- **Solidity Documentation**: [Link to Solidity](https://soliditylang.org/docs/)
 
+---
+
+## 🛠️ Next Steps
+
+- Learn more about contract optimization.
+- Explore more advanced features like events and access control.
+- Build a more complex dApp (Decentralized Application) that interacts with the contract.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
