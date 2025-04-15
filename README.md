@@ -86,3 +86,8 @@ When you run the tests, you should see the following output:
 - Explore deploying contracts to a test network (like Rinkeby or Sepolia).
 - Learn how to interact with smart contracts from a frontend application.
 This is just the beginning. Stay tuned for more smart contracts and deeper learning as I progress through the course!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
