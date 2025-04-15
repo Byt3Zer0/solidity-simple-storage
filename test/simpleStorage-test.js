@@ -1,50 +1,36 @@
 const { expect } = require("chai");
-const { ethers } = require("hardhat");
 
 describe("SimpleStorage Contract", function () {
-  let SimpleStorage;
-  let simpleStorage;
-  let owner;
+  let SimpleStorageFactory, simpleStorage;
 
-  // This hook will be executed before each test
   beforeEach(async function () {
-    // Obtain the SimpleStorage contract
-    SimpleStorage = await ethers.getContractFactory("SimpleStorage");
-
-    // Deploy the contract
-    simpleStorage = await SimpleStorage.deploy();
-
-    // Obtain the owner of the contract
-    [owner] = await ethers.getSigners();
+    SimpleStorageFactory = await ethers.getContractFactory("SimpleStorage");
+    simpleStorage = await SimpleStorageFactory.deploy();
+    await simpleStorage.waitForDeployment(); // 👈 este es el correcto en Hardhat
   });
 
   it("should deploy the contract", async function () {
-    // Verified that the contract was deployed correctly
-    expect(simpleStorage.address).to.not.equal("0x0000000000000000000000000000000000000000");
-    expect(simpleStorage.address).to.not.equal("");
-    expect(simpleStorage.address).to.not.equal(null);
+    const address = await simpleStorage.getAddress();
+    console.log("Contract Address:", address);
+    expect(address).to.properAddress;
   });
 
   it("should store a number", async function () {
-    // Call the function store
     await simpleStorage.store(42);
-
-    // Obtain the stored number
-    const storedNumber = await simpleStorage.retrieve();
-
-    // Call the store function with a new value
-    expect(storedNumber).to.equal(42);
+    const result = await simpleStorage.retrieve();
+    expect(result.toString()).to.equal("42");
   });
 
-  it("should update the stored number", async function () {
-    // Call the store function with a new value
-    await simpleStorage.store(42);
-    await simpleStorage.store(100);
+  it("should add a person and store their favorite number", async function () {
+    await simpleStorage.addPerson("Alice", 7);
+    const person = await simpleStorage.listOfPeople(0);
+    expect(person.name).to.equal("Alice");
+    expect(person.favoriteNumber.toString()).to.equal("7");
+  });
 
-    // Obtain the updated stored number
-    const storedNumber = await simpleStorage.retrieve();
-
-    // Verify that the stored number is correct
-    expect(storedNumber).to.equal(100);
+  it("should retrieve a person's favorite number by name", async function () {
+    await simpleStorage.addPerson("Bob", 99);
+    const favorite = await simpleStorage.nameToFavoriteNumber("Bob");
+    expect(favorite.toString()).to.equal("99");
   });
 });
